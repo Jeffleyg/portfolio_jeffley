@@ -6,8 +6,8 @@
   
   <!-- SEO & Recruiter ATS Meta Tags -->
   <title>Jeffley Garçon | Data Engineer, AI Researcher & Backend Developer</title>
-  <meta name="description" content="Portfólio profissional de Jeffley Garçon. Engenharia de Dados, SQL Server, T-SQL, Python, PyTorch, Séries Temporais (LSTM & Transformers) e Microsserviços." />
-  <meta name="keywords" content="Jeffley Garçon, Data Engineer, Engenheiro de Dados, Machine Learning Engineer, SQL Server, T-SQL, Python, PyTorch, Deep Learning, NestJS, UFSC, UFFS, Florianópolis" />
+  <meta name="description" content="Portfólio profissional de Jeffley Garçon. Engenharia de Dados, SQL Server, T-SQL, Python, PyTorch, Séries Temporais (LSTM & Transformers), Streamlit e Microsserviços." />
+  <meta name="keywords" content="Jeffley Garçon, Data Engineer, Engenheiro de Dados, Machine Learning Engineer, SQL Server, T-SQL, Python, PyTorch, Deep Learning, Streamlit, NestJS, UFSC, UFFS, Florianópolis" />
   <meta name="author" content="Jeffley Garçon" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://jeffleyg.github.io/portfolio_jeffley/" />
@@ -15,7 +15,7 @@
   <!-- OpenGraph Meta Tags (Cards no LinkedIn / Redes Sociais) -->
   <meta property="og:type" content="profile" />
   <meta property="og:title" content="Jeffley Garçon | Data Engineer & AI Researcher" />
-  <meta property="og:description" content="Engenharia de Dados, Modelagem Preditiva em Séries Temporais com Deep Learning e Arquitetura de Software." />
+  <meta property="og:description" content="Engenharia de Dados, Modelagem Preditiva em Séries Temporais com Deep Learning, Pipelines em Produção e Arquitetura de Software." />
   <meta property="og:url" content="https://jeffleyg.github.io/portfolio_jeffley/" />
   <meta property="og:image" content="https://github.com/Jeffleyg.png" />
 
@@ -42,7 +42,7 @@
       }
     ],
     "knowsAbout": [
-      "Data Engineering", "SQL Server", "T-SQL", "Python", "PyTorch", 
+      "Data Engineering", "SQL Server", "T-SQL", "Python", "PyTorch", "Streamlit",
       "Deep Learning", "Time Series Forecasting", "Transformers", "Docker", "Node.js", "NestJS"
     ]
   }
@@ -296,7 +296,7 @@
       transform: scale(1.1);
     }
 
-    /* Metric Banner (Recruiter Metric Booster) */
+    /* Metric Banner */
     .metrics-bar {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -384,10 +384,11 @@
     .project-footer {
       display: flex;
       align-items: center;
-      gap: 1rem;
+      gap: 1.2rem;
       margin-top: auto;
       border-top: 1px solid var(--border);
       padding-top: 1rem;
+      flex-wrap: wrap;
     }
     .project-link {
       color: var(--text-main);
@@ -400,6 +401,12 @@
       transition: var(--transition);
     }
     .project-link:hover { color: var(--primary); }
+    .project-link.highlight-link {
+      color: var(--primary);
+    }
+    .project-link.highlight-link:hover {
+      text-decoration: underline;
+    }
 
     /* Skills & Languages */
     .skills-grid {
@@ -582,25 +589,29 @@
       </div>
 
       <div class="grid-3">
-        <!-- Projeto 1: TCC / Deep Learning -->
+        <!-- Projeto 1: Pipeline Hidrológico & Deep Learning -->
         <article class="card project-card">
           <div class="project-header">
-            <i class="fa-solid fa-brain project-icon"></i>
-            <span class="tag">Pesquisa & Deep Learning</span>
+            <i class="fa-solid fa-water project-icon"></i>
+            <span class="tag">Pipeline em Produção & IA</span>
           </div>
-          <h3>Previsão de Séries Temporais (LSTM & TFT)</h3>
+          <h3>Hydrological AI Pipeline & Séries Temporais</h3>
           <p>
-            Framework preditivo para dados hidrológicos da bacia do Rio Uruguai. Benchmark entre modelos Recorrentes (LSTM) e mecanismos de Atenção (Temporal Fusion Transformers - TFT), reduzindo erros de previsão em regimes de vazão extrema.
+            Pipeline end-to-end processando 14.000+ registros temporais da bacia do Rio Uruguai (Estação 71200000). Realiza ingestão, feature engineering dinâmica, inferência preditiva (LSTM/TFT) e cálculo de métricas hidrológicas oficiais (NSE, KGE, RMSE).
           </p>
           <div class="tech-tags">
             <span class="tag">Python</span>
+            <span class="tag">Streamlit</span>
+            <span class="tag">Plotly</span>
             <span class="tag">PyTorch</span>
-            <span class="tag">Transformers</span>
-            <span class="tag">Time Series</span>
+            <span class="tag">Pandas</span>
           </div>
           <div class="project-footer">
-            <a href="https://github.com/Jeffleyg" target="_blank" class="project-link">
-              Repositório no GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            <a href="https://hydro-ai-pipeline.streamlit.app/" target="_blank" class="project-link highlight-link">
+              <i class="fa-solid fa-rocket"></i> Ver App Online
+            </a>
+            <a href="https://github.com/Jeffleyg/hydro-ai-pipeline" target="_blank" class="project-link">
+              <i class="fa-brands fa-github"></i> Código
             </a>
           </div>
         </article>
@@ -623,7 +634,7 @@
           </div>
           <div class="project-footer">
             <a href="https://github.com/Jeffleyg" target="_blank" class="project-link">
-              Repositório no GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              <i class="fa-brands fa-github"></i> Repositório no GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i>
             </a>
           </div>
         </article>
@@ -646,7 +657,7 @@
           </div>
           <div class="project-footer">
             <a href="https://github.com/Jeffleyg" target="_blank" class="project-link">
-              Repositório no GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              <i class="fa-brands fa-github"></i> Repositório no GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i>
             </a>
           </div>
         </article>
